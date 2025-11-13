@@ -1,72 +1,66 @@
-import { Zap, Eye, Layers, Shield } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Code, Bot, Brain } from "lucide-react";
 
 const features = [
   {
-    icon: Zap,
-    title: "Lightning Fast",
-    description: "Process and analyze data at incredible speeds with our optimized algorithms.",
-    color: "spectrum-yellow",
+    icon: Code,
+    title: "PROGRAMMING",
+    description: "Learn to code with fun, interactive lessons. Build games, apps, and websites while mastering programming fundamentals.",
+    color: "border-prism-orange",
+    bgColor: "bg-prism-orange/10",
+    iconColor: "text-prism-orange",
   },
   {
-    icon: Eye,
-    title: "Crystal Clear",
-    description: "Visualize complex information with stunning clarity and precision.",
-    color: "spectrum-cyan",
+    icon: Bot,
+    title: "ROBOTICS",
+    description: "Build and program real robots! Explore engineering, electronics, and bring your creative ideas to life.",
+    color: "border-prism-teal",
+    bgColor: "bg-prism-teal/10",
+    iconColor: "text-prism-teal",
   },
   {
-    icon: Layers,
-    title: "Multi-Dimensional",
-    description: "Explore data from every angle with our multi-layered analysis tools.",
-    color: "spectrum-purple",
-  },
-  {
-    icon: Shield,
-    title: "Secure & Private",
-    description: "Your data is protected with enterprise-grade security and encryption.",
-    color: "spectrum-blue",
+    icon: Brain,
+    title: "STRONG MIND",
+    description: "Develop problem-solving skills, logical thinking, and creativity through engaging challenges and projects.",
+    color: "border-prism-yellow",
+    bgColor: "bg-prism-yellow/10",
+    iconColor: "text-prism-yellow",
   },
 ];
 
 const Features = () => {
   return (
-    <section className="py-24 bg-background relative overflow-hidden">
-      {/* Background decoration */}
-      <div className="absolute inset-0 bg-gradient-to-b from-secondary/50 to-transparent"></div>
-      
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center mb-16 animate-fade-in-up">
-          <h2 className="text-4xl lg:text-5xl font-bold mb-4">
-            Powerful Features
+    <section className="py-24 bg-white">
+      <div className="container mx-auto px-4">
+        <div className="text-center max-w-3xl mx-auto mb-16 animate-fade-in-up">
+          <h2 className="text-4xl lg:text-5xl font-bold mb-4 text-prism-navy">
+            Main Categories
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Everything you need to transform your data into actionable insights
+          <p className="text-xl text-prism-navy/70 font-medium">
+            Explore our exciting learning paths designed for young innovators
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {features.map((feature, index) => {
-            const Icon = feature.icon;
-            return (
-              <Card 
-                key={feature.title}
-                className="border-border/50 hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 animate-fade-in-up"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <CardHeader>
-                  <div className={`w-12 h-12 rounded-lg bg-${feature.color}/10 flex items-center justify-center mb-4`}>
-                    <Icon className={`w-6 h-6 text-${feature.color}`} />
-                  </div>
-                  <CardTitle>{feature.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription className="text-base">
-                    {feature.description}
-                  </CardDescription>
-                </CardContent>
-              </Card>
-            );
-          })}
+        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          {features.map((feature, index) => (
+            <Card 
+              key={index} 
+              className={`border-4 ${feature.color} hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 animate-fade-in-up ${feature.bgColor} group cursor-pointer`}
+              style={{ animationDelay: `${index * 0.1}s` }}
+            >
+              <CardHeader className="text-center pb-4">
+                <div className={`w-32 h-32 mx-auto rounded-full border-4 ${feature.color} flex items-center justify-center mb-6 ${feature.bgColor} group-hover:scale-110 transition-transform duration-300`}>
+                  <feature.icon className={`w-16 h-16 ${feature.iconColor}`} strokeWidth={2.5} />
+                </div>
+                <CardTitle className="text-2xl font-bold text-prism-navy tracking-wide">{feature.title}</CardTitle>
+              </CardHeader>
+              <CardContent className="text-center">
+                <CardDescription className="text-base text-prism-navy/70 font-medium leading-relaxed">
+                  {feature.description}
+                </CardDescription>
+              </CardContent>
+            </Card>
+          ))}
         </div>
       </div>
     </section>

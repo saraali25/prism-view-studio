@@ -47,6 +47,15 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        prism: {
+          navy: "hsl(var(--prism-navy))",
+          teal: "hsl(var(--prism-teal))",
+          orange: "hsl(var(--prism-orange))",
+          yellow: "hsl(var(--prism-yellow))",
+          red: "hsl(var(--prism-red))",
+          green: "hsl(var(--prism-green))",
+          "light-bg": "hsl(var(--prism-light-bg))",
+        },
         spectrum: {
           red: "hsl(var(--spectrum-red))",
           orange: "hsl(var(--spectrum-orange))",
