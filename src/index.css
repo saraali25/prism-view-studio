@@ -9,47 +9,56 @@ All colors MUST be HSL.
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 240 10% 10%;
+    --foreground: 210 40% 20%;
 
     --card: 0 0% 100%;
-    --card-foreground: 240 10% 10%;
+    --card-foreground: 210 40% 20%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 10%;
+    --popover-foreground: 210 40% 20%;
 
-    --primary: 271 91% 65%;
+    --primary: 210 60% 25%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 240 5% 96%;
-    --secondary-foreground: 240 10% 10%;
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 210 60% 25%;
 
-    --muted: 240 5% 96%;
-    --muted-foreground: 240 4% 46%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
 
-    --accent: 271 91% 65%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 210 40% 96%;
+    --accent-foreground: 210 60% 25%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 240 6% 90%;
-    --input: 240 6% 90%;
-    --ring: 271 91% 65%;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 210 60% 25%;
 
     --radius: 0.75rem;
     
+    /* Prism Academy colors - matching Django site */
+    --prism-navy: 210 60% 25%;
+    --prism-teal: 188 90% 45%;
+    --prism-orange: 16 90% 60%;
+    --prism-yellow: 45 95% 55%;
+    --prism-red: 350 85% 60%;
+    --prism-green: 160 85% 45%;
+    --prism-light-bg: 210 40% 98%;
+    
     /* Prism spectrum colors */
-    --spectrum-red: 0 100% 67%;
-    --spectrum-orange: 25 95% 62%;
-    --spectrum-yellow: 48 96% 53%;
-    --spectrum-green: 142 76% 47%;
-    --spectrum-cyan: 189 94% 53%;
-    --spectrum-blue: 217 91% 60%;
-    --spectrum-purple: 271 91% 65%;
+    --spectrum-red: 350 85% 60%;
+    --spectrum-orange: 16 90% 60%;
+    --spectrum-yellow: 45 95% 55%;
+    --spectrum-green: 160 85% 45%;
+    --spectrum-cyan: 188 90% 45%;
+    --spectrum-blue: 210 90% 55%;
+    --spectrum-purple: 280 75% 60%;
     --spectrum-magenta: 328 85% 65%;
     
     /* Gradient definitions */
-    --gradient-spectrum: linear-gradient(135deg, 
+    --gradient-spectrum: linear-gradient(90deg, 
       hsl(var(--spectrum-red)), 
       hsl(var(--spectrum-orange)), 
       hsl(var(--spectrum-yellow)), 
@@ -59,9 +68,9 @@ All colors MUST be HSL.
       hsl(var(--spectrum-purple)));
     
     --gradient-hero: linear-gradient(135deg, 
-      hsl(var(--spectrum-purple)), 
-      hsl(var(--spectrum-blue)), 
-      hsl(var(--spectrum-cyan)));
+      hsl(var(--prism-teal)) 0%, 
+      hsl(var(--prism-yellow)) 50%,
+      hsl(var(--prism-orange)) 100%);
     
     /* Animation transitions */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -85,33 +94,33 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 240 10% 8%;
+    --background: 210 60% 10%;
     --foreground: 0 0% 98%;
 
-    --card: 240 10% 12%;
+    --card: 210 50% 15%;
     --card-foreground: 0 0% 98%;
 
-    --popover: 240 10% 12%;
+    --popover: 210 50% 15%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 271 91% 65%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 188 90% 45%;
+    --primary-foreground: 210 60% 10%;
 
-    --secondary: 240 4% 16%;
+    --secondary: 210 40% 20%;
     --secondary-foreground: 0 0% 98%;
 
-    --muted: 240 4% 16%;
-    --muted-foreground: 240 5% 65%;
+    --muted: 210 40% 20%;
+    --muted-foreground: 215 20% 65%;
 
-    --accent: 271 91% 65%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 210 40% 20%;
+    --accent-foreground: 0 0% 98%;
 
-    --destructive: 0 63% 31%;
+    --destructive: 350 85% 60%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 240 4% 16%;
-    --input: 240 4% 16%;
-    --ring: 271 91% 65%;
+    --border: 210 40% 20%;
+    --input: 210 40% 20%;
+    --ring: 188 90% 45%;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
